@@ -1,0 +1,153 @@
+/* UserTable.css */
+.table-container {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevents border-radius from being clipped */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.user-management-title {
+    font-size: 2.5rem;                /* Larger font size */
+    font-weight: bold;                /* Bold text */
+    color: #111110;                  /* Green color */
+    text-align: center;               /* Centered text */
+    margin: 20px 0;                  /* Margin above and below */
+    padding: 10px;                   /* Padding around text */
+    border-bottom: 2px solid #ddd;    /* Light gray bottom border */
+    text-transform: uppercase;         /* Uppercase letters */
+    letter-spacing: 1px;              /* Letter spacing for effect */
+    font-family: 'Arial', sans-serif;  /* Font family */
+}
+table {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* Prevents border-radius from being clipped */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Arial', sans-serif; /* Font styling */
+}
+
+/* Header styling */
+th {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    font-weight: bold; /* Bold text */
+}
+
+/* Alternating row colors */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for even rows */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; /* White for odd rows */
+}
+
+/* Add hover effect */
+tr:hover {
+    background-color: #e0e0e0; /* Light gray on hover */
+}
+
+/* Button styling */
+.button {
+    margin: 5px;
+    padding: 8px 15px; /* Increased padding */
+    cursor: pointer;
+    background-color: #007BFF; /* Bootstrap primary color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+button.edit-button {
+    background-color: #2196F3; /* Blue */
+    color: white;
+}
+button.add-button{
+    background-color: #2196F3;
+    color: white;
+}
+/* Delete Button */
+button.delete-button {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+/* Button hover effect */
+.button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Success message styling */
+.success-message {
+    color: rgb(5, 152, 37);
+    font-weight: bold;
+    margin: 10px 0; /* Margin around success message */
+    font-size: 1.6rem;/* Larger font size */
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Responsive heading adjustment for smaller screens */
+    h1.user-management-title {
+        font-size: 24px; /* Smaller font size on smaller screens */
+        margin-bottom: 15px; /* Adjust margin for spacing */
+    }
+    .table-container {
+        padding: 10px; /* Adjust padding */
+    }
+
+    table {
+        font-size: 14px; /* Smaller font for table */
+    }
+
+    th, td {
+        padding: 8px; /* Smaller padding for table cells */
+    }
+
+    /* Stack the buttons in smaller view */
+    button {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 8px 12px; /* Adjust padding for smaller screens */
+        margin: 8px; /* Adjust margin for smaller screens */
+    }
+    
+}
+
+/* Mobile view for very small screens */
+@media (max-width: 480px) {
+    th, td {
+        display: block; /* Make table cells block elements */
+        text-align: right; /* Align text to the right */
+        border: none; /* Remove borders */
+        position: relative; /* Position relative for absolute positioning */
+        padding-left: 50%; /* Space for the label */
+    }
+
+    th {
+        display: none; /* Hide header in block mode */
+    }
+
+    td::before {
+        content: attr(data-label); /* Use data-label for headings */
+        position: absolute; /* Position absolutely */
+        left: 0; /* Align to the left */
+        width: 50%; /* Take up 50% of the space */
+        padding-left: 10px; /* Padding for the label */
+        text-align: left; /* Align text to the left */
+        font-weight: bold; /* Bold labels */
+    }
+}
+@media (max-width: 600px) {
+    .user-management-title {
+        font-size: 2rem;              /* Smaller size for mobile */
+    }
+}
